@@ -5,7 +5,7 @@ To propperly send request you need to have admin role in users Tabale and includ
 
 **index(Request $request)** - retrieves a list of currency exchange rates from the database, depending on the provided parameters. If no parameters are provided, a list of all currency exchange rates is returned. If the date parameter is provided, exchange rates for that day are returned. If the currency parameter is provided, exchange rates for the specified currency are returned. The method returns a JSON response.
 
-**store(Request $request)** - adds a new currency exchange rate to the database. This method requires three parameters: currency (currency code), date (date), and amount (exchange rate value). If the provided currency exchange rate already exists in the database, an error with an appropriate message is returned. Otherwise, a new record with the currency exchange rate is created and the appropriate HTTP status (201 - CREATED) is returned.
+**store(Request $request)** - adds a new currency exchange rate to the database. This method requires three parameters: currency (currency code), date (date), and amount (exchange rate value). If the provided currency exchange rate already exists in the database with the same date, an error with an appropriate message is returned. Otherwise, a new record with the currency exchange rate is created and the appropriate HTTP status (201 - CREATED) is returned.
 
 # The AuthController controller is responsible for authenticating the user and generating a token that can be used for subsequent requests. This controller has two methods:
 
