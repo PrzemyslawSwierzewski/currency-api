@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-    Route::apiResource('currency-rates', App\Http\Controllers\CurrencyRateController::class);
+Route::apiResource('currency-rates', App\Http\Controllers\CurrencyRateController::class);
 
 Route::post('login', [AuthController::class, 'authenticate']);
