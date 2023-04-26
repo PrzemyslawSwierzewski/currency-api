@@ -9,6 +9,8 @@ use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class CurrencyRateController extends Controller
 {
+    private $allowedCurrencies = ['EUR', 'USD', 'GBP'];
+
     public function __construct()
     {
         if (!Auth::guard('api')->check()) {
@@ -53,7 +55,7 @@ class CurrencyRateController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'currency' => ['required', 'string', 'size:3'],
+            'currency' => ['required', 'string', 'size:3', 'in:' . implode(',', $this->allowedCurrencies)],
             'date' => ['required', 'date'],
             'amount' => ['required', 'numeric', 'between:0,999999.99']
         ]);
