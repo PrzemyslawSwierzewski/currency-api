@@ -11,7 +11,7 @@
 
 **logout(Request $request)** - logs out the user by invalidating the token. This method requires the user to have a valid token, which is destroyed upon logging out. The HTTP status (204 - NO CONTENT) is returned.
 
-Application routes consist of two elements:
+# Application routes consist of two elements:
 
 **Middleware auth:sanctum** - blocks access to routes that require authentication. A user who tries to access such a route without a valid token will be redirected to the login page.
 
