@@ -1,5 +1,5 @@
 # currency-api made in laravel php framework all files are in Project directory
-To propperly send request you need you have admin role in users Tabale and include auth token in Header
+To propperly send request you need to have admin role in users Tabale and include auth token in Header
 
 # The CurrencyRateController controller is responsible for handling HTTP requests related to currency exchange rates. This controller has two methods:
 
