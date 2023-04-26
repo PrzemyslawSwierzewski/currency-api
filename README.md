@@ -1,4 +1,4 @@
-# currency-api
+# currency-api made in laravel php framework all files are in Projecy directory
 **The CurrencyRateController controller** is responsible for handling HTTP requests related to currency exchange rates. This controller has two methods:
 
 **index(Request $request)** - retrieves a list of currency exchange rates from the database, depending on the provided parameters. If no parameters are provided, a list of all currency exchange rates is returned. If the date parameter is provided, exchange rates for that day are returned. If the currency parameter is provided, exchange rates for the specified currency are returned. The method returns a JSON response.
